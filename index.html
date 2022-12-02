@@ -39,7 +39,7 @@
 }
 
 html,body{
-  background-color: #f7eae2;
+  background-color: #ff0000;
   overflow: visible;
   width: 100%; 
   height: 100%;
@@ -81,7 +81,7 @@ ul{
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
+  
   font-size: 70px;
   font: bold;
   font-family: 'SF Compact Text';
@@ -103,16 +103,18 @@ ul{
 .centered{
   position: absolute;
   display: inline-block;
-  top: 50%;
+  top: 300px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  height: auto;
 }
 
 .centered img{
-  padding-right: 100px;
-  padding-left: 100px;
-  width: auto;
+  
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .promocoes{
@@ -146,7 +148,7 @@ ul{
 }
 
 .row{
-  flex-wrap: nowrap;
+  
 }
 
 .footer{
@@ -154,6 +156,14 @@ ul{
   width: 100%;
   height: 305px;
   
+}
+
+.loc-framediv{
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 </style>
@@ -176,7 +186,7 @@ ul{
   </nav>
 
   <div class="container-fluid" style=" margin: 0; padding: 0; border: 0px;" id="home">
-    <div class="row" style=" height: 100%; border: 0px;">
+    <div class="row" style=" height: 100%; border: 0px; --bs-gutter-x: 0;">
       <div class="col-lg-5 col-md-5 col-xs-5" style="width: 20%; height: 100%"><img src="./img/flor-esquerda.png"></div>
       <div class="col-lg-5 col-md-5 col-xs-5" style="width: 10%; height: 10%"></div>
       <div class="col-lg-5 col-md-5 col-xs-5" style="width: 40%; height: 40%"><img src="./img/imagemcentral.png" style="width: 100%;" id="imagemcentral"></div>
@@ -188,7 +198,7 @@ ul{
 
 
   <div class="sobre-isso">
-    <div class="row" style="width: 100%;">
+    <div class="row" style="width: auto; margin-left: 0px; margin-right: 0px;">
       <div class="col text-center" id="sobre">
         <div style="margin: 100px;">
           <h5 style="font-size: 70px; color: #7D3436;">Sobre</h5>
@@ -196,7 +206,7 @@ ul{
           <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
         </div>
       </div>
-      <div class="col" style="background-color: #f7eae2;">
+      <div class="col" style="background-color: #f7eae2; min-width: 415.394px;">
         <img src="img/Bloco Foto Boleira.png" style="width: 100%; ">
       </div>
     </div>
@@ -218,34 +228,34 @@ ul{
     </div>
   </div>
 
-<div style="position: relative; text-align: center; width: 100%;">
-    <img src="img/tela Localizacao.png" style="width: 100%; height: 100%;">
+<div style="position: relative; text-align: center; min-height: 900px;">
+    <img src="img/tela Localizacao.png" style="width: 100%; min-height: 900px;">
     <div class="top2"><h5 style="font-size: 70px; color: #7D3436; width: 100%; left: 0; right: 0;">Localização</h5></div>
-  <div style="top: 210px; left: 68px">
-    <div style="width:700px; height:382px; position: absolute; z-index: 1000; top: 310px; right: 250px">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.9009617228335!2d-48.065541435910006!3d-15.809175341650723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3344e001c96d%3A0x8b6d7f5a090815a4!2sP%C3%A2tisserie%20Bolos!5e0!3m2!1sen!2sbr!4v1655945998550!5m2!1sen!2sbr" width="900" height="582" style="border:50px; border-width: 3px; border-color: black; border-style: groove; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+    <div class="loc-framediv" style="width:60%; height:50%; position: absolute; z-index: 1000;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.9009617228335!2d-48.065541435910006!3d-15.809175341650723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3344e001c96d%3A0x8b6d7f5a090815a4!2sP%C3%A2tisserie%20Bolos!5e0!3m2!1sen!2sbr!4v1655945998550!5m2!1sen!2sbr" width="100%" height="100%" style="border:50px; border-width: 3px; border-color: black; border-style: groove; border-radius: 30px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
+  
 </div>
 
 
   <div>
-    <div style="position: relative; text-align: center; width: 99%;">
-      <img src="img/Bloco Galeria.png" style="width: 100%; height: 50%;">
+    <div style="position: relative; text-align: center; width: auto; min-height: 600px;">
+      <img src="img/Bloco Galeria.png" style="width: 100%; min-height: 600px;">
       <div class="top"><h5 style="font-size: 70px; color: #7D3436;">Galeria</h5></div>
         <div class="centered">
-          <div class="row">
+          <div class="row" style="width: 100%; height: 100%; margin-left: 0;">
 
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-3 col-sm-3" style="width: 33%; height: auto;">
               <img src="img/foto galeria.png">
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-3 col-sm-3" style="width: 33%; height: auto;">
               <img src="img/foto galeria.png">
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <img src="img/foto galeria.png">
+            <div class="col-lg-3 col-md-3 col-sm-3" style="width: 33%; height: auto;">
+              <img src="img/foto galeria.png" >
             </div>
 
           </div>
@@ -254,8 +264,39 @@ ul{
   </div>
 
   
+  <div class="footer" style="width: 100%; height: 100%;  background-color: #7D3436;">
+    <div class="container-fluid" style="display: inline-block; text-decoration: none!important; width: 100%; height: 600px; background-color: #7D3436;">
+      
+      <div style="width: 400px;"><img src="./img/logo2.png" style="max-width: 400px;" href="javascript:void(0)"></div>
+      
+      <div class="row" style="width: 100px; height: 100px; margin-left: 5px; ">
 
-  <div class="footer" style="height: 305px;">
+        <div class="col-lg-3 col-md-2 col-sm-2" style="width: 50%; height: 50px;">
+          <img src="./img/instagram.png" style="" href="https://www.instagram.com/patisseriebolos/" >
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 50%; height: 50px;">
+          <img src="./img/whatsapp.png" style="padding-left: 30px;" href="https://contate.me/patisseriebolos/">
+        </div>
+
+      </div>   
+
+      <div class="row" style="width: 400px; height: 100px; margin-left: 5px; ">
+
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 50%; height: 50px;">
+          <a style="font-family: SF Compact Text; color: #FAF3EB; font-size: 20px;"><img src="./img/mark.png"> CND 02, Lt 01, Loja 8 - CEP 72120025<br>Taguatinga Norte, Brasília - Df</a>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 50%; height: 50px;">
+          <a style="font-family: SF Compact Text; color: #FAF3EB; font-size: 20px;"><img src="./img/hour.png"> De segunda à sexta: 09:00hrs às 19:00hrs<br>
+            Sábado: 09:00hrs às 13:00hrs</a>
+        </div>
+
+      </div>
+
+  </div>  
+
+  <!-- <div class="footer" style="height: 305px;">
     <div class="container-fluid" style="text-decoration: none!important;">
       
         <a class="navbar-brand" href="javascript:void(0)"><img src="./img/logo2.png" style="width: 434px; height: 304px;"></a>
@@ -268,7 +309,7 @@ ul{
         Sábado: 09:00hrs às 13:00hrs</a></li>
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <!-- modal itself -->
   <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
